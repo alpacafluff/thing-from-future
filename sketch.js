@@ -1,178 +1,64 @@
 // Variables Index
+// Buttons
+let drawButton;
+let resetButton;
 
-let colBlack;
-  // Buttons
-  let arcButton;
-  let terrainButton;
-  let objectButton;
-  let moodButton;
-  let captureButton;
-  let resetButton;
+let dynamicArc = null;
+
+// Arc HTML Elements
+let settingNameHTML;
+let settingDescriptionHTML;
+let timeHTML;
 
 
-  //Cards
-  // var arcCard;
-  // Draw Result
-  // var arcResult;
-
-  ///hacer variable para extrar el objeto json del archivo
-
+///hacer variable para extrar el objeto json del archivo
 
 function setup() {
+  //reateCanvas(200, 200);
+  noCanvas();
 
-colBlack = color('#000000');
+  // Select existing html nodes to use with JS
+  //buttons
+  drawButton = select("#draw-button");
+  resetButton = select("#reset-button");
+  settingNameHTML = select("#settingNameHTML");
+  settingDescriptionHTML = select("#settingDescriptionHTML");
+  timeHTML = select("#timeHTML");
 
-/*
-//assign color variables
-NEED TO FIX THIS WAS THROWING ERRORS, RN HARDCODING COLORS
-​           // Neutrals 
-​            //white = color('#FFFFFF');
-​            //lightestGray = color('#F5F4F4');
-​            //lightGray = color('#E5E4E4');
-​            //gray = color('#A1A1A1');
-​            //darkGray = color('#646161');
-​            //darkestGray = color('#2D2B2B');
-​            //black = color('#000000');
+  // Call functions that work with mouse presses (clicking on the buttons)
+  drawButton.mousePressed(clickedDraw);
+  resetButton.mousePressed(clickedReset);
 
-​            // Content 
-​                // Arc 
-​                //arcLightest = color('#F0F4F4');
-​                //arcLight = color('#A6BFBA');
-​                arcIntense = color('#6B948D');
-​                //arcDark = color('#405954');
-​              
-​                // Terrain 
-​                //terrainLightest = color('#EEEFF6');
-​                //terrainLight = color('#9B9ECA');
-​                terrainIntense = color('#585EA7');
-​                //terrainDark = color('#353864');
+}
 
-​                // Object 
-​                //objectLightest = color('#FEE7F0');
-​                //objectLight = color('#FA94BF');
-​                objectIntense = color('#DB0B62');
-​                //objectDark = color('#920741');
-               
-​                // Mood 
-
-​                //moodLightest = color('#F6EEEF');
-​                //moodLight = color('#C18A8D');
-​                moodIntense = color('#A7585D');
-​                //moodDark = color('#643538');
-
-*/
-
-// temporary canvas for button assignment test
-
-createCanvas(200, 200);
-background(colBlack);
-
-// Select existing html nodes to use with JS
-//buttons
-arcButton = select('#arc-button');
-terrainButton = select('#terrain-button');
-objectButton = select('#object-button');
-moodButton = select('#mood-button');
-captureButton = select ('#capture-button');
-resetButton = select ('#reset-button');
-//cards
-//arcCard= select('#arc-card');
-
-//draw results
-//arcResult= select('arc-result;');
+function loadJSONFile() {
+  // Load the JSON from file
+  dynamicArc = loadJSON("content.json", clickedDraw);
+}
 
 
-// Call functions that work with mouse presses (clicking on the buttons)
+function arcContent() {
 
-arcButton.mouseClicked(clickedArc);
-terrainButton.mouseClicked(clickedTerrain);
-objectButton.mouseClicked(clickedObject);
-moodButton.mouseClicked(clickedMood);
-captureButton.mouseClicked(clickedCapture);
-resetButton.mouseClicked(clickedReset);
+  let settingJSON = dynamicArc.content[0].arc[0].setting;
+  let RandomSetting = random(settingJSON);
+  //print html elements
+  settingNameHTML.html(RandomSetting.name);
+  settingDescriptionHTML.html(RandomSetting.description);
 
-
+  // Time
+  let timeJSON = dynamicArc.content[0].arc[1].time;
+  let printRandomTime = random(timeJSON);
+  timeHTML.html(printRandomTime);
 }
 
 // declare functionality of buttons upon being pressed
 
-function clickedArc () {
-
-//button test: create a rect 100, 100, 50, 50 color with intense hue of this thematic shade
-  fill('#6B948D');
-  noStroke();
-  rect(0, 0, 100, 100);
-
-
-/*later: 
-change card color to intense hue
-change text color (all) to white
-hide button
-reveal 'draw-result' textbook
-dynamically present content from list in a randomized way
-*/
-
+function clickedDraw() {
+  console.log("Draw button has been clicked");
+  dynamicArc = loadJSON('content.json', arcContent);
+  arcContent();
 }
 
-function clickedTerrain () {
-
-//button test: create a rect 100, 100, 50, 50 color with intense hue of this thematic shade
-  fill('#585EA7');
-  noStroke();
-  rect(100, 0, 100, 100);
-
-/*later: 
-change card color to intense hue
-change text color (all) to white
-hide button
-reveal 'draw-result' textbook
-dynamically present content from list in a randomized way
-*/
-
+function clickedReset() {
+  console.log("Reset button has been clicked");
 }
-
-function clickedObject () {
-
-//button test: create a rect 100, 100, 50, 50 color with intense hue of this thematic shade
-  fill('#DB0B62');
-  noStroke();
-  rect(0, 100, 100, 100);
-
-/*later: 
-change card color to intense hue
-change text color (all) to white
-hide button
-reveal 'draw-result' textbook
-dynamically present content from list in a randomized way
-*/
-
-}
-
-function clickedMood () {
-
-//button test: create a rect 100, 100, 50, 50 color with intense hue of this thematic shade
-  fill('#A7585D');
-  noStroke();
-  rect(100, 100, 100, 100);
-
-/*later: 
-change card color to intense hue
-change text color (all) to white
-hide button
-reveal 'draw-result' textbook
-dynamically present content from list in a randomized way
-*/
-
-}
-
-function clickedCapture () {
-  fill('white');
-  ellipse(60, 20, 20, 20);
-}
-
-function clickedReset () {
-  fill(colBlack);
-  rect(0, 0, 200, 200);
-
-}
-

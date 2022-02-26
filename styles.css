@@ -102,14 +102,13 @@
 
 /* Global Styles (Text & Layout) */
 * {
-  margin: 0;
-  padding: 0;
+  text-align: center;
 }
 
 body {
   background-color: var(--lightest-gray);
-  text-align: center;
   font-family: "Ubuntu", sans-serif;
+  margin: 0;
 }
 
 /* II.Component Layouts*/
@@ -117,21 +116,19 @@ body {
 /* Page Header */
 
 header {
-  padding: 40px 40px 20px 40px;
-  text-align: center;
+  padding: 2vh 2vh 4vh 2vh;
 }
 
 /* Footer */
 footer {
   background-color: var(--footer);
-  margin: 20px 0 0 0;
-  padding: 20px 20px 60px 20px;
-  text-align: center;
+  margin: 3vh 0 0vh 0;
+  padding: 3vh 4vh 6vh 4vh;
   color: var(--black);
 }
 
 #button-section {
-  padding: 1px 10px 10px 10px;
+  padding: 0;
 }
 
 /* Content */
@@ -139,10 +136,11 @@ footer {
   display: block;
   align-items: center;
   justify-content: center;
+  width: 80%;
+  margin: auto;
 }
 
 /* Card */
-
 
 .cards-front {
   display: flex;
@@ -159,12 +157,12 @@ footer {
 }
 
 .card {
-    border-radius: 6px;
-    width: 180px;
-    height: 280px;
-    margin: 5px;
-    padding: 20px;
-  }
+  border-radius: 1vh;
+  margin: 1.5vh;
+  padding: 4vh;
+  width: 30vw;
+  height: 50vh;
+}
 /*  FIX THIS MEDIA QUERY IS BROKEN
     @media screen and (max-width:500px) {
         .content {
@@ -202,19 +200,21 @@ footer {
 }
 
 .card-header {
-  padding: 10px 0 0 0;
+  padding: 1vh 0 1vh 0;
+  margin: 2vh 0 0.5vh 0;
 }
 .card-footer {
   position: relative;
-  padding: 20px 0 0 0;
+  margin: 1vh 0 0.5vh 0;
 }
 
 /* Result Textboxes */
 
 .result-textbox {
-  margin: 5px;
-  padding: 10px;
-  border-radius: 6px;
+  border-radius: 1vh;
+  padding: 2vh 1vh 2vh 1vh;
+  margin: 0.05vh;
+  position: relative;
 }
 
 #plot-textbox {
@@ -250,12 +250,14 @@ h1 {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 52px;
+  font-size: 10vh;
+  margin: 0.5vh;
   color: var(--black);
 }
 /* Dek | Description */
 #dek {
-  font-size: 22px;
+  font-size: 3vh;
+  margin: 0.5vh;
 }
 
 /* Footer */
@@ -264,8 +266,8 @@ h1 {
   font-family: Ubuntu;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 160%;
+  font-size: 2vh;
+  margin: 0.05vh;
 }
 
 /* Cards */
@@ -275,73 +277,69 @@ h2 {
   font-family: "Lora", serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 36px;
-  padding: 40px 0 0 0;
+  font-size: 5vh;
+  margin: 0.5vh;
+  padding: 0.5vh;
 }
 .helper-text {
   font-family: Ubuntu;
   font-style: normal;
-  font-size: 14px;
-  line-height: 160%;
-  text-align: center;
-  line-height: 140%;
+  font-size: 2vh;
+  padding: 0.5vh;
+  margin: 0.05vh;
 }
 /* Card Content */
 h3 {
   font-family: Lora;
   font-style: italic;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 140%;
+  font-size: 2.5vh;
+  margin: 0.5vh;
+  padding: 0.5vh;
 }
 
 h4 {
   font-family: Ubuntu;
   font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 130%;
-  text-align: center;
+  font-weight: 700;
+  font-size: 2.5vh;
+  margin: 0.5vh;
 }
 
-.keyword-description {
+div {
+  font-size: 2vh;
+  margin: 0;
   font-family: Ubuntu;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 130%;
-  text-align: center;
 }
 
 /* IV. Button Styles */
 
 /* All Buttons */
 button {
-  border-radius: 6px;
-  text-align: center;
+  border-radius: 1vh;
   font-family: Ubuntu;
   transition-duration: 0.05s;
-  width: 85%;
+  width: 100%;
 }
 
 /* Global (Footer) Buttons */
 .global-button {
   background: var(--lightest-gray);
-  border: 2px solid var(--gray);
-  padding: 15px 30px;
-  margin: 4px;
+  border: 0.45vh solid var(--gray);
+  padding: 2vh 4vh;
+  margin: 1vh;
   color: var(--dark-gray);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 3vh;
 }
 
 .global-button:hover {
   background: var(--lightest-gray);
-  border: 2px solid var(--black);
+  border: 0.45vh solid var(--black);
   color: var(--black);
 }
 .global-button:active {
   background: var(--black);
-  border: 2px solid var(--white);
+  border: 0.45vh solid var(--white);
   color: var(--white);
 }
