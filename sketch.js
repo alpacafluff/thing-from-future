@@ -1,45 +1,6 @@
 // Variables Index
 
 let colBlack;
-/* 
-// Colors
-NEED TO FIX THIS WAS THROWING ERRORS, RN HARDCODING COLORS
-    // Neutrals 
-  ​     //var colWhite;
-  ​     //var colLightestGray;
-  ​     //var collightGray;
-  ​     //var colgray;
-  ​     //var coldarkGray;
-  ​     //var darkestGray;
-  ​     //var colBlack;
-
-    ​ // Content Colors
-    ​   // Arc 
-    ​     //var colArcLightest;
-    ​     //var colArcLight;
-    ​     var colArcIntense;
-    ​     //var colArcDark;
-
-    ​   // Terrain 
-    ​     //var colTerrainLightest;
-    ​     //var colTerrainLight;
-    ​     //var colTerrainIntense;
-    ​     //var colTerrainDark;
-
-    ​// Object 
-    ​     //var colObjectLightest;
-    ​     //var colObjectLight;
-    ​     var colObjectIntense;
-    ​     //var colObjectDark;
-                    
-    ​ // Mood 
-    ​     //var colMoodLightest;
-    ​     //var colMoodLight;
-    ​     // var colMoodIntense;
-    ​     //var colMoodDark;
-
-  */
-
   // Buttons
   let arcButton;
   let terrainButton;
