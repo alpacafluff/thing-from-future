@@ -1,0 +1,412 @@
+/* STYLESHEET INDEX
+    I.Global Styles
+    
+    Color Variables
+        Neutrals
+        Content
+            Arc
+            Terrain
+            Object
+            Mood
+
+    Global Styles (Text & Layout)
+
+  II. Component Layouts
+        Body
+        Header
+        Footer
+        Content
+        Cards
+            Card Colors
+                Arc
+                Terrain
+                Object
+                Mood
+            Card Header
+            Card Content
+                Draw Result [PENDING]
+
+    III. Text Styles
+        Page Header    
+            H1 (Global title)
+            Dek (Header Description Text)
+        Footer (Byline)
+
+        Cards
+            Card Header
+                H2 (Card title)
+                Helper Text
+                Icon
+                Title
+            Card Content
+                H3 (Subsection title)
+                H4 (Keyword)
+                Keyword Description 
+
+    IV. Button Styles [PENDING]
+        
+        Global Button Style
+        Cards
+             Arc
+             Terrain
+             Object
+             Mood
+             
+        Footer
+    
+    V. Icon Styles
+        Icon Sizes
+        Icon Colors
+
+
+*/
+
+/* I. Global Styles */
+    /* Color Variables */
+    :root{
+            /* Neutrals */
+            --white: #FFFFFF;
+            --lightest-gray: #F5F4F4;
+            --light-gray: #E5E4E4;
+            --gray: #A1A1A1;
+            --dark-gray: #646161;
+            --darkest-gray: #2D2B2B;
+            --black: #000000;
+
+            /* Content */
+                /* Arc */
+                --arc-lightest: #F0F4F4;
+                --arc-light: #A6BFBA;
+                --arc-intense: #6B948D;
+                --arc-dark: #405954;
+                
+                /* Terrain */
+                --terrain-lightest: #EEEFF6;
+                --terrain-light: #9B9ECA;
+                --terrain-intense: #585EA7;
+                --terrain-dark: #353864;
+
+                /* Object */
+                --object-lightest: #FEE7F0;
+                --object-light: #FA94BF;
+                --object-intense: #DB0B62;
+                --object-dark: #920741;
+                
+                /* Mood */
+                --mood-lightest: #F6EEEF;
+                --mood-light: #C18A8D;
+                --mood-intense: #A7585D;
+                --mood-dark: #643538;
+    }
+    
+    /* Global Styles (Text & Layout) */
+    * {
+        margin: 0;
+        padding: 0;
+    } 
+    
+    body{
+        background-color: var(--lightest-gray);    
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+
+/* II.Component Layouts*/
+
+    
+    /* Page Header */
+
+    header {
+            padding: 40px;
+            text-align: center;
+            
+    }
+   
+
+    /* Footer */
+    footer {
+
+        padding: 20px;
+        text-align: center;
+
+    }
+
+    /* Content */
+    .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 35px;
+    }
+
+    @media screen and (max-width:600px) {
+        .content {
+            display: block;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+        /* Card */
+        .card {
+        border-radius: 6px;
+        width: 230px;
+        height: 300px;
+        margin: 15px;
+        padding:30px;
+        }
+
+            #arc-card {
+                background-color: var(--arc-light);
+
+            }
+            #terrain-card {
+                background-color: var(--terrain-light);
+
+            }
+            #object-card {
+                background-color: var(--object-light);
+
+            }
+            #mood-card {
+                background-color: var(--mood-light);
+
+            }
+
+            .card-header{
+                padding: 20px 0 0 0;
+                
+            }
+            .card-content{
+                position: relative;
+            }
+
+            /* Result Textboxes */
+            
+            .result-textbox{
+                padding: 10px;
+                border-radius: 6px;
+                }
+                                
+                #plot-textbox{
+                background: var(--arc-lightest); 
+                color:var(--arc-dark);
+                }
+                
+                #time-textbox{
+                background: var(--arc-lightest);
+                color:var(--arc-dark);
+                }
+                                
+                #terrain-textbox{
+                background: var(--terrain-lightest);
+                color:var(--terrain-dark);
+                }
+                
+                #object-textbox{
+                background: var(--object-lightest);                
+                color:var(--object-dark);
+                }
+                                
+                #mood-textbox{
+                background: var(--mood-lightest);
+                color:var(--mood-dark);
+                }
+
+
+
+
+
+/* III. Text Styles */
+
+    /* Page Header */
+        /* H1 | Global Title */
+            h1 {
+                font-family: 'Lora', serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 52px;
+
+            }
+        /* Dek | Description */
+         #dek{
+            font-size: 22px;
+             }
+
+    /* Footer */
+            #footer-buttons {
+                padding: 50px 0px;
+            }
+            #byline {
+                font-family: Ubuntu;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 160%;
+
+            }
+
+     /* Cards */
+
+    /* Page Header */
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 36px;
+            padding: 60px 0 0 0;
+        }
+        .helper-text {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 160%;
+            text-align: center;
+            color:var(--darkest-gray);
+            line-height: 140%;
+        }
+    /* Page Content */
+        h3 {
+            font-family: Lora;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 140%;
+        }
+
+        h4 {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 130%;
+            text-align: center;
+        }
+
+        .keyword-description {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 130%;
+            text-align: center;
+        }
+
+/* IV. Button Styles */
+
+    /* All Buttons */
+    button {
+    border-radius: 6px;  
+    font-family: Ubuntu;  
+    transition-duration: 0.05s;
+    /*Add transition*/
+    }
+    
+    /* Global (Footer) Buttons */
+    .global-button {
+    background: var(--lightest-gray);    
+    border: 2px solid var(--gray);    
+    padding: 15px 30px;  
+    margin: 4px;  
+    color:var(--dark-gray);
+    font-weight: bold;    
+    font-size: 20px;   
+    text-align: left;
+    }
+
+    .global-button:hover {
+        background: var(--lightest-gray);    
+        border: 2px solid var(--black);    
+        color:var(--black);
+
+        }
+    .global-button:active {
+            background: var(--black);    
+            border: 2px solid var(--white);    
+            color:var(--white);
+    
+            }
+
+    /* Card Buttons */ 
+
+    .card-button {  
+        border: none; 
+        font-size: 14px;  
+        text-align: center;   
+        color:var(--white);    
+        padding: 10px 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 50px 0 0 -55px;
+    
+    }
+
+    .card-button:hover {  
+        border: 3px solid var(--white);  
+        
+        }
+    
+    #arc-button {   
+    background: var(--arc-intense);
+    
+    }
+
+    #arc-button:active {   
+        background: var(--arc-dark);
+        
+        }
+    
+    #terrain-button {   
+    background: var(--terrain-intense);  
+    }
+
+    #terrain-button:active {   
+        background: var(--terrain-dark);  
+        }
+    
+    #object-button {   
+    background: var(--object-intense);  
+    }
+
+    #object-button:active {   
+        background: var(--object-dark);  
+        }
+    
+    #mood-button {  
+    background: var(--mood-intense);   
+    }
+    
+    #mood-button:active {  
+        background: var(--mood-dark);   
+        }
+    
+
+
+
+/* V. Icon Styles */
+    /* V. Icon Sizes */
+    .small-icon{
+        width: 10px;
+        height:10px; 
+        margin: 0;  
+        padding: 0; 
+        position: relative;
+        bottom:10px;
+        transform: scale(1.5);     
+        }
+     .medium-icon{
+        width: 20px;   
+        height: 20px;    
+            }
+
+
+    /* V. Icon Colors */
+    .icon-arc {fill:var(--arc-intense);}
+    .icon-terrain {fill:var(--terrain-intense);}
+    .icon-object  {fill:var(--object-intense);}
+    .icon-mood  {fill:var(--mood-intense);}
+    .icon-white {fill:var(--white);}
+    .icon-dark-gray {fill:var(--dark-gray);}
+    .icon-dark-gray:hover{fill:var(--black);}
