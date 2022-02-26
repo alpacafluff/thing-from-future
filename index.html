@@ -1,96 +1,189 @@
 <!DOCTYPE html>
 <html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thing from the Future</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thing from the Future</title>
-  
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" 
-        href="https://fonts.gstatic.com">
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400&family=Ubuntu:wght@400;700&display=swap">
-  <script src="p5/p5.js"></script>
-  <!-- <script src="../addons/p5.sound.js"></script> -->
-  <script src="sketch.js"></script>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400&family=Ubuntu:wght@400;700&display=swap"
+    />
+    <script src="p5/p5.js"></script>
+    <!-- <script src="../addons/p5.sound.js"></script> -->
+    <script src="sketch.js"></script>
+  </head>
 
-<body>
-  <main>
-    <!-- Start of Header Section-->  
-    <header>
-      <h1> The Thing from the Future </h1>
-      <p id="dek"> Prompts to create and describe objects from alternative futures </p>
-    </header>
-    <!-- End of Header Section-->  
+  <body>
+    <main>
+      <!-- Start of Header Section-->
+      <header>
+        <h1>The Thing from the Future</h1>
+        <p id="dek">
+          Prompts to create and describe objects from alternative futures
+        </p>
+      </header>
+      <!-- End of Header Section-->
 
-  <!-- Start of Content Section-->
-  <section class="content">
-  <section class="cards">
-    <!-- Start of Arc Card-->
-    <section class="card" id="arc-card">
-      <!--Card Header-->
-          <section class="card-front">
-          <h2>Arc</h2>
-          <p class="helper-text">Kind of future (plot type) and time horizon where this object lives</p>
+      <!-- Start of Content Section-->
+      <section class="content">
+        <section class="cards-front">
+          <!-- Start of Arc Card-->
+          <section class="card" id="arc-card-front">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Arc</h2>
+            </section>
+            <section class="card-footer">
+              <p class="helper-text">
+                Kind of future (plot type) and time horizon where this object
+                lives
+              </p>
+            </section>
+
+            <!--Card Content-->
           </section>
+          <!-- End of Arc Card-->
 
-        <!--Card Content-->
+          <!-- Start of Terrain Card-->
+          <section class="card" id="terrain-card-front">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Terrain</h2>
+            </section>
+            <section class="card-footer">
+              <p class="helper-text">
+                Describes contexts, places and subject matters
+              </p>
+            </section>
+            <!--Card Content-->
+          </section>
+          <!-- End of Terrain Card-->
+
+          <!-- Start of Object Card-->
+          <section class="card" id="object-card-front">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Object</h2>
+            </section>
+            <section class="card-footer">
+              <p class="helper-text">
+                The artifact (thing) that must be designed
+              </p>
+            </section>
+            <!--Card Content-->
+          </section>
+          <!-- End of Object Card-->
+
+          <!-- Start of Mood Card-->
+          <section class="card" id="mood-card-front">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Mood</h2>
+            </section>
+            <section class="card-footer">
+              <p class="helper-text">
+                Emotions the thing might evoke in an observer from the present
+              </p>
+            </section>
+            <!--Card Content-->
+          </section>
+          <!-- End of Mood Card-->
+
+          <!-- End of cards section-->
+        </section>
+
+        <section class="cards-back">
+          <!-- Start of Arc Card-->
+          <section class="card" id="arc-card-back">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Arc</h2>
+            </section>
+            <section class="card-footer">
+              <h3>Plot type</h3>
+              <p class="result-textbox" id="plot-textbox">
+                hey
+              </p>
+              <h3>Time horizon</h3>
+              <p class="result-textbox" id="time-textbox">
+                hola crayola
+              </p>
+            </section>
+
+            <!--Card Content-->
+          </section>
+          <!-- End of Arc Card-->
+
+          <!-- Start of Terrain Card-->
+          <section class="card" id="terrain-card-back">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Terrain</h2>
+            </section>
+            <section class="card-footer">
+              <p class="result-textbox" id="terrain-textbox">
+                hola crayola
+              </p>
+            </section>
+            <!--Card Content-->
+          </section>
+          <!-- End of Terrain Card-->
+
+          <!-- Start of Object Card-->
+          <section class="card" id="object-card-back">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Object</h2>
+            </section>
+            <section class="card-footer">
+              <p class="result-textbox" id="object-textbox">
+                hola crayola
+              </p>
+            </section>
+            <!--Card Content-->
+          </section>
+          <!-- End of Object Card-->
+
+          <!-- Start of Mood Card-->
+          <section class="card" id="mood-card-back">
+            <!--Card Header-->
+            <section class="card-header">
+              <h2>Mood</h2>
+            </section>
+            <section class="card-footer">
+              <p class="result-textbox" id="mood-textbox">
+                hola crayola
+              </p>
+            </section>
+            <!--Card Content-->
+          </section>
+          <!-- End of Mood Card-->
+
+          <!-- End of cards section-->
+        </section>
+
+        <section id="button-section">
+          <button class="global-button" id="draw-button">Draw cards</button>
+        </section>
       </section>
-    <!-- End of Arc Card-->
+      <!-- End of Content Section-->
 
-    <!-- Start of Terrain Card-->
-    <section class="card" id="terrain-card">
-        <!--Card Header-->
-        <section class="card-header">
-          <h2>Terrain</h2>
-          <p class="helper-text">Describes contexts, places and subject matters</p>
-        </section>
-        <!--Card Content-->
-   </section>
-   <!-- End of Terrain Card-->
-
-   <!-- Start of Object Card-->
-   <section class="card" id="object-card">
-     <!--Card Header-->
-        <section class="card-header">
-          <h2>Object</h2>
-          <p class="helper-text">The artifact (thing) that must be designed</p>
-        </section>
-    <!--Card Content-->
-    </section>
-    <!-- End of Object Card-->
-
-    <!-- Start of Mood Card-->
-    <section class="card" id="mood-card">
-          <!--Card Header-->
-          <section class="card-header">
-            <h2>Mood</h2>
-            <p class="helper-text">Emotions the thing might evoke in an observer from the present</p>
-
-
-          </section>
-          <!--Card Content-->
-    </section>
-    <!-- End of Mood Card-->    
-
-      <!-- End of cards section-->    
-</section> 
-<section id="button-section">
-  <button class="global-button" id="draw-button">Draw cards</button>
-</section>
-</section>  
-<!-- End of Content Section-->  
-
-<!-- Start of Footer Section-->  
-<footer>
-
-
-  <p id="byline">The Thing from the Future (2014) is originally a physical card playing game created by Stuart Candy and Jeff Watson (Situation Lab). Visit their site <a href="https://situationlab.org/project/the-thing-from-the-future/">here </a> </p>
-</footer>
-<!-- End of Footer Section-->  
-  </main>
-</body>
-<!-- End of Body--> 
+      <!-- Start of Footer Section-->
+      <footer>
+        <p id="byline">
+          The Thing from the Future (2014) is originally a physical card playing
+          game created by Stuart Candy and Jeff Watson (Situation Lab). Visit
+          their site
+          <a href="https://situationlab.org/project/the-thing-from-the-future/"
+            >here
+          </a>
+        </p>
+      </footer>
+      <!-- End of Footer Section-->
+    </main>
+  </body>
+  <!-- End of Body-->
 </html>
