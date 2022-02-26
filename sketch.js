@@ -103,10 +103,10 @@ NEED TO FIX THIS WAS THROWING ERRORS, RN HARDCODING COLORS
 
 // temporary canvas for button assignment test
 
-createCanvas(200, 200, 0, 0);
+createCanvas(200, 200);
 background(colBlack);
 
-// Select existing nodes to use with JS
+// Select existing html nodes to use with JS
 //buttons
 arcButton = select('#arc-button');
 terrainButton = select('#terrain-button');

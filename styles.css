@@ -118,7 +118,7 @@
     /* Page Header */
 
     header {
-            padding: 40px;
+            padding: 40px 40px 20px 40px;
             text-align: center;
             
     }
@@ -126,18 +126,29 @@
 
     /* Footer */
     footer {
-
-        padding: 20px;
+        background-color: var(--black);
+        padding: 20px 20px 60px 20px ;
         text-align: center;
+        color:var(--white);
 
+    }
+
+    #button-section {
+        padding: 1px 10px 10px 10px;
     }
 
     /* Content */
     .content {
+        display: block;
+        align-items: center;
+        justify-content: center;
+
+}    
+    .cards {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-bottom: 35px;
+
     }
 
     @media screen and (max-width:600px) {
@@ -151,8 +162,8 @@
         /* Card */
         .card {
         border-radius: 6px;
-        width: 230px;
-        height: 300px;
+        width: 180px;
+        height: 250px;
         margin: 15px;
         padding:30px;
         }
@@ -227,7 +238,7 @@
                 font-style: normal;
                 font-weight: bold;
                 font-size: 52px;
-
+                color:var(--black);
             }
         /* Dek | Description */
          #dek{
@@ -235,9 +246,7 @@
              }
 
     /* Footer */
-            #footer-buttons {
-                padding: 50px 0px;
-            }
+
             #byline {
                 font-family: Ubuntu;
                 font-style: normal;
@@ -249,7 +258,7 @@
 
      /* Cards */
 
-    /* Page Header */
+    /* Card Header */
         h2 {
             font-family: 'Lora', serif;
             font-weight: normal;
@@ -266,7 +275,7 @@
             color:var(--darkest-gray);
             line-height: 140%;
         }
-    /* Page Content */
+    /* Card Content */
         h3 {
             font-family: Lora;
             font-style: italic;
