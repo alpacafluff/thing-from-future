@@ -227,6 +227,10 @@ footer {
   color: var(--arc-dark);
 }
 
+#timeH3 {
+  margin-top: 3vh;;
+}
+
 #terrain-textbox {
   background: var(--terrain-lightest);
   color: var(--terrain-dark);
