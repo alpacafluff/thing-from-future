@@ -29,7 +29,8 @@
 
       <!-- Start of Content Section-->
       <section class="content">
-        <section class="cards-front">
+        <!-- Start of front cards section-->
+        <section id="cards-front">
           <!-- Start of Arc Card-->
           <section class="card" id="arc-card-front">
             <!--Card Header-->
@@ -41,6 +42,7 @@
                 Kind of future (plot type) and time horizon where this object
                 lives
               </div>
+              <div class="questionmark"id="arcQ">?</div>
             </section>
 
             <!--Card Content-->
@@ -57,6 +59,7 @@
               <div class="helper-text">
                 Describes contexts, places and subject matters
               </div>
+              <div class="questionmark" id="terrainQ">?</div>
             </section>
             <!--Card Content-->
           </section>
@@ -72,6 +75,7 @@
               <div class="helper-text">
                 The artifact (thing) that must be designed
               </div>
+              <div class="questionmark" id="objectQ">?</div>
             </section>
             <!--Card Content-->
           </section>
@@ -87,15 +91,17 @@
               <div class="helper-text">
                 Emotions the thing might evoke in an observer from the present
               </div>
+              <div class="questionmark" id="moodQ">?</div>
             </section>
             <!--Card Content-->
           </section>
           <!-- End of Mood Card-->
 
-          <!-- End of cards section-->
+          <!-- End of front cards section-->
         </section>
 
-        <section class="cards-back">
+        <section id="cards-back">
+          <!-- Start of of back cards section-->
           <!-- Start of Arc Card-->
           <section class="card" id="arc-card-back">
             <!--Card Header-->
@@ -163,12 +169,12 @@
           </section>
           <!-- End of Mood Card-->
 
-          <!-- End of cards section-->
+          <!-- End of back cards section-->
         </section>
 
         <section id="button-section">
           <button class="global-button" id="draw-button">Draw cards</button>
-          <button class="global-button" id="reset-button">Reset</button>
+          <button class="global-button" id="reset-button" >Reset</button>
         </section>
       </section>
       <!-- End of Content Section-->

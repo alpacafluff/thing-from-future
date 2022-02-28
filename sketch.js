@@ -13,6 +13,8 @@ let timeHTML;
 let terrainHTML;
 let objectHTML;
 let moodHTML;
+let frontCardsHTML;
+let backCardsHTML;
 
 ///hacer variable para extrar el objeto json del archivo
 
@@ -30,6 +32,8 @@ function setup() {
   terrainHTML = select("#terrainHTML");
   objectHTML = select("#objectHTML");
   moodHTML = select("#moodHTML");
+  frontCardsHTML=select("#cards-front");
+  backCardsHTML=select("#cards-back");
 
   // Call functions that work with mouse presses (clicking on the buttons)
   drawButton.mousePressed(loadJSONFile);
@@ -37,9 +41,10 @@ function setup() {
 }
 
 function loadJSONFile() {
-  // Load the JSON from file
+  // Load the JSON from file/ react to Draw button click
   dynamic = loadJSON("content.json", onFileload);
   console.log("Draw button has been clicked");
+
 }
 
 function onFileload() {
@@ -47,6 +52,11 @@ function onFileload() {
   randomTerrain();
   randomObject();
   randomMood();
+  frontCardsHTML.elt.style.display="none";
+  // backCardsHTML.show();
+  // drawButton.hide();
+  resetButton.show();
+
 }
 
 function randomArc() {
@@ -85,4 +95,15 @@ function randomMood() {
 // test declare functionality of buttons upon being pressed
 function clickedReset() {
   console.log("Reset button has been clicked");
+  frontCardsHTML.show();
+  // backCardsHTML.hide();
+  // drawButton.show();
+  // resetButton.hide();
+
+}
+
+function toggleCards() {
+  if (frontCardsHTML.elt.style == "none") {
+    
+  }
 }

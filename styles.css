@@ -142,14 +142,14 @@ footer {
 
 /* Card */
 
-.cards-front {
+#cards-front {
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--darkest-gray);
 }
 
-.cards-back {
+#cards-back {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,6 +208,27 @@ footer {
   margin: 1vh 0 0.5vh 0;
 }
 
+.questionmark {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15vh;
+  margin: 4vh;
+}
+
+#arcQ {
+  color: var(--arc-dark);
+}
+#terrainQ {
+  color: var(--terrain-dark);
+}
+#objectQ {
+  color: var(--object-dark);
+}
+#moodQ {
+  color: var(--mood-dark);
+}
+
 /* Result Textboxes */
 
 .result-textbox {
@@ -228,7 +249,7 @@ footer {
 }
 
 #timeH3 {
-  margin-top: 3vh;;
+  margin-top: 3vh;
 }
 
 #terrain-textbox {
@@ -254,7 +275,7 @@ h1 {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 10vh;
+  font-size: 8vh;
   margin: 0.5vh;
   color: var(--black);
 }
