@@ -132,8 +132,8 @@ footer {
 }
 
 /* Content */
-.content {
-  display: block;
+#content {
+  display: sticky;
   align-items: center;
   justify-content: center;
   width: 80%;
@@ -142,17 +142,18 @@ footer {
 
 /* Card */
 
-#cards-front {
+.card-container{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#cards-front {
+
   color: var(--darkest-gray);
 }
 
 #cards-back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--white);
 }
 
@@ -163,15 +164,7 @@ footer {
   width: 30vw;
   height: 50vh;
 }
-/*  FIX THIS MEDIA QUERY IS BROKEN
-    @media screen and (max-width:500px) {
-        .content {
-            display: block;
-            width: 100%;
-            justify-content: center;
-        }
-    }
-    */
+
 
 #arc-card-front {
   background-color: var(--arc-light);

@@ -16,6 +16,9 @@ let moodHTML;
 let frontCardsHTML;
 let backCardsHTML;
 
+// let cardContainer;
+// let cards;
+
 ///hacer variable para extrar el objeto json del archivo
 
 function setup() {
@@ -32,8 +35,17 @@ function setup() {
   terrainHTML = select("#terrainHTML");
   objectHTML = select("#objectHTML");
   moodHTML = select("#moodHTML");
+
+
   frontCardsHTML=select("#cards-front");
   backCardsHTML=select("#cards-back");
+  frontCardsHTML.style("display", "flex");
+  backCardsHTML.style("display", "none");
+  drawButton.style("display", "block");
+  resetButton.style("display", "none");
+
+  
+
 
   // Call functions that work with mouse presses (clicking on the buttons)
   drawButton.mousePressed(loadJSONFile);
@@ -52,10 +64,10 @@ function onFileload() {
   randomTerrain();
   randomObject();
   randomMood();
-  frontCardsHTML.elt.style.display="none";
-  // backCardsHTML.show();
-  // drawButton.hide();
-  resetButton.show();
+  frontCardsHTML.style("display", "none");
+  backCardsHTML.style("display", "flex");
+  drawButton.style("display", "none");
+  resetButton.style("display", "block");
 
 }
 
@@ -95,15 +107,15 @@ function randomMood() {
 // test declare functionality of buttons upon being pressed
 function clickedReset() {
   console.log("Reset button has been clicked");
-  frontCardsHTML.show();
-  // backCardsHTML.hide();
-  // drawButton.show();
-  // resetButton.hide();
+  frontCardsHTML.style("display", "flex");
+  backCardsHTML.style("display", "none");
+  drawButton.style("display", "block");
+  resetButton.style("display", "none");
 
 }
 
-function toggleCards() {
-  if (frontCardsHTML.elt.style == "none") {
-    
-  }
-}
+// function toggleCards() {
+// if (frontCardsHTML.elt.style.display== "none") {
+//   frontCardsHTML.elt.style.display== "none"
+// }
+// }
