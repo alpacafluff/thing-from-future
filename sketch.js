@@ -3,13 +3,21 @@
 let drawButton;
 let resetButton;
 
-let dynamicArc = null;
+// variable to hold JSON values
+let dynamic = null;
 
 // Arc HTML Elements
 let settingNameHTML;
 let settingDescriptionHTML;
 let timeHTML;
+let terrainHTML;
+let objectHTML;
+let moodHTML;
+let frontCardsHTML;
+let backCardsHTML;
 
+// let cardContainer;
+// let cards;
 
 ///hacer variable para extrar el objeto json del archivo
 
@@ -24,41 +32,90 @@ function setup() {
   settingNameHTML = select("#settingNameHTML");
   settingDescriptionHTML = select("#settingDescriptionHTML");
   timeHTML = select("#timeHTML");
+  terrainHTML = select("#terrainHTML");
+  objectHTML = select("#objectHTML");
+  moodHTML = select("#moodHTML");
+
+
+  frontCardsHTML=select("#cards-front");
+  backCardsHTML=select("#cards-back");
+  frontCardsHTML.style("display", "flex");
+  backCardsHTML.style("display", "none");
+  drawButton.style("display", "block");
+  resetButton.style("display", "none");
+
+  
+
 
   // Call functions that work with mouse presses (clicking on the buttons)
-  drawButton.mousePressed(clickedDraw);
+  drawButton.mousePressed(loadJSONFile);
   resetButton.mousePressed(clickedReset);
-
 }
 
 function loadJSONFile() {
-  // Load the JSON from file
-  dynamicArc = loadJSON("content.json", clickedDraw);
+  // Load the JSON from file/ react to Draw button click
+  dynamic = loadJSON("content.json", onFileload);
+  console.log("Draw button has been clicked");
+
 }
 
+function onFileload() {
+  randomArc();
+  randomTerrain();
+  randomObject();
+  randomMood();
+  frontCardsHTML.style("display", "none");
+  backCardsHTML.style("display", "flex");
+  drawButton.style("display", "none");
+  resetButton.style("display", "block");
 
-function arcContent() {
+}
 
-  let settingJSON = dynamicArc.content[0].arc[0].setting;
-  let RandomSetting = random(settingJSON);
+function randomArc() {
+  let settingJSON = dynamic.content[0].arc[0].setting;
+  let randomSetting = random(settingJSON);
   //print html elements
-  settingNameHTML.html(RandomSetting.name);
-  settingDescriptionHTML.html(RandomSetting.description);
+  settingNameHTML.html(randomSetting.name);
+  settingDescriptionHTML.html(randomSetting.description);
 
   // Time
-  let timeJSON = dynamicArc.content[0].arc[1].time;
-  let printRandomTime = random(timeJSON);
-  timeHTML.html(printRandomTime);
+  let timeJSON = dynamic.content[0].arc[1].time;
+  let randomTime = random(timeJSON);
+  timeHTML.html(randomTime);
 }
 
-// declare functionality of buttons upon being pressed
-
-function clickedDraw() {
-  console.log("Draw button has been clicked");
-  dynamicArc = loadJSON('content.json', arcContent);
-  arcContent();
+function randomTerrain() {
+  let terrainJSON = dynamic.content[1].terrain;
+  let randomTerrain = random(terrainJSON);
+  terrainHTML.html(randomTerrain);
+  console.log("Terrain function was summoned");
+}
+function randomObject() {
+  let objectJSON = dynamic.content[2].object;
+  let randomObject = random(objectJSON);
+  objectHTML.html(randomObject);
+  console.log("Object function was summoned");
+}
+//function randomMood() {}
+function randomMood() {
+  let moodJSON = dynamic.content[3].mood;
+  let randomMood = random(moodJSON);
+  moodHTML.html(randomMood);
+  console.log("Mood function was summoned");
 }
 
+// test declare functionality of buttons upon being pressed
 function clickedReset() {
   console.log("Reset button has been clicked");
+  frontCardsHTML.style("display", "flex");
+  backCardsHTML.style("display", "none");
+  drawButton.style("display", "block");
+  resetButton.style("display", "none");
+
 }
+
+// function toggleCards() {
+// if (frontCardsHTML.elt.style.display== "none") {
+//   frontCardsHTML.elt.style.display== "none"
+// }
+// }

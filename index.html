@@ -28,149 +28,155 @@
       <!-- End of Header Section-->
 
       <!-- Start of Content Section-->
-      <section class="content">
-        <section class="cards-front">
+      <div id="content">
+
+
+        <!-- Start of front cards section-->
+        <div id="cards-front" class="card-container">
           <!-- Start of Arc Card-->
-          <section class="card" id="arc-card-front">
+          <div class="card" id="arc-card-front">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Arc</h2>
-            </section>
-            <section class="card-footer">
+            </div>
+            <div class="card-footer">
               <div class="helper-text">
                 Kind of future (plot type) and time horizon where this object
                 lives
               </div>
-            </section>
+              <div class="questionmark"id="arcQ">?</div>
+            </div>
 
             <!--Card Content-->
-          </section>
+          </div>
           <!-- End of Arc Card-->
 
           <!-- Start of Terrain Card-->
-          <section class="card" id="terrain-card-front">
+          <div class="card" id="terrain-card-front">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Terrain</h2>
-            </section>
-            <section class="card-footer">
+            </div>
+            <div class="card-footer">
               <div class="helper-text">
                 Describes contexts, places and subject matters
               </div>
-            </section>
+              <div class="questionmark" id="terrainQ">?</div>
+            </div>
             <!--Card Content-->
-          </section>
+          </div>
           <!-- End of Terrain Card-->
 
           <!-- Start of Object Card-->
-          <section class="card" id="object-card-front">
+          <div class="card" id="object-card-front">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Object</h2>
-            </section>
-            <section class="card-footer">
+            </div>
+            <div class="card-footer">
               <div class="helper-text">
                 The artifact (thing) that must be designed
               </div>
-            </section>
+              <div class="questionmark" id="objectQ">?</div>
+            </div>
             <!--Card Content-->
-          </section>
+          </div>
           <!-- End of Object Card-->
 
           <!-- Start of Mood Card-->
-          <section class="card" id="mood-card-front">
+          <div class="card" id="mood-card-front">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Mood</h2>
-            </section>
-            <section class="card-footer">
+            </div>
+            <div class="card-footer">
               <div class="helper-text">
                 Emotions the thing might evoke in an observer from the present
               </div>
-            </section>
+              <div class="questionmark" id="moodQ">?</div>
+            </div>
             <!--Card Content-->
-          </section>
+          </div>
           <!-- End of Mood Card-->
 
-          <!-- End of cards section-->
-        </section>
+          <!-- End of front cards section-->
+        </div>
 
-        <section class="cards-back">
+        <div id="cards-back" class="card-container" >
+          <!-- Start of of back cards section-->
           <!-- Start of Arc Card-->
-          <section class="card" id="arc-card-back">
+          <div class="card" id="arc-card-back">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Arc</h2>
-            </section>
-            <section class="card-footer">
+            </div>
+            <div class="card-footer">
               <h3>Plot type</h3>
-              <section class="result-textbox" id="plot-textbox">
-                <h4 id="settingNameHTML">hey</h4>
-                <div id="settingDescriptionHTML">holo</div>
-              </section>
-              <h3>Time horizon</h3>
-              <section class="result-textbox" id="time-textbox">
-                <div id="timeHTML" class="textbox-title">hey</div>
-              </section>
-            </section>
-
-            <!--Card Content-->
-          </section>
+              <div class="result-textbox" id="plot-textbox">
+                <h4 id="settingNameHTML">[Setting name]</h4>
+                <div id="settingDescriptionHTML">[Setting description]</div>
+              </div>
+              <h3 id="timeH3">Time horizon</h3>
+              <div class="result-textbox" id="time-textbox">
+                <div id="timeHTML" class="textbox-title">[Time]</div>
+              </div>
+            </div>
+          </div>
           <!-- End of Arc Card-->
 
           <!-- Start of Terrain Card-->
-          <section class="card" id="terrain-card-back">
+          <div class="card" id="terrain-card-back">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Terrain</h2>
-            </section>
-            <section class="card-footer">
-              <section class="result-textbox" id="terrain-textbox">
-                <h4>hey</h4>
-              </section>
-            </section>
+            </div>
+            <div class="card-footer">
+              <div class="result-textbox" id="terrain-textbox">
+                <h4 id="terrainHTML">[Terrain]</h4>
+              </div>
+            </div>
             <!--Card Content-->
-          </section>
+          </div>
           <!-- End of Terrain Card-->
 
           <!-- Start of Object Card-->
-          <section class="card" id="object-card-back">
+          <div class="card" id="object-card-back">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Object</h2>
-            </section>
-            <section class="card-footer">
-              <section class="result-textbox" id="object-textbox">
-                <h4>hey</h4>
-              </section>
-            </section>
+            </div>
+            <div class="card-footer">
+              <div class="result-textbox" id="object-textbox">
+                <h4 id="objectHTML">[Object]</h4>
+              </div>
+            </div>
             <!--Card Content-->
-          </section>
+          </div>
           <!-- End of Object Card-->
 
           <!-- Start of Mood Card-->
-          <section class="card" id="mood-card-back">
+          <div class="card" id="mood-card-back">
             <!--Card Header-->
-            <section class="card-header">
+            <div class="card-header">
               <h2>Mood</h2>
-            </section>
-            <section class="card-footer">
-              <section class="result-textbox" id="mood-textbox">
-                <h4>hey</h4>
-              </section>
-            </section>
+            </div>
+            <div class="card-footer">
+              <div class="result-textbox" id="mood-textbox">
+                <h4 id="moodHTML">[Mood]</h4>
+              </div>
+            </div>
             <!--Card Content-->
-          </section>
+          </div>
           <!-- End of Mood Card-->
 
-          <!-- End of cards section-->
-        </section>
+          <!-- End of back cards section-->
+        </div>
 
-        <section id="button-section">
+        <div id="button-section">
           <button class="global-button" id="draw-button">Draw cards</button>
           <button class="global-button" id="reset-button">Reset</button>
-        </section>
-      </section>
+        </div>
+      </div>
       <!-- End of Content Section-->
 
       <!-- Start of Footer Section-->

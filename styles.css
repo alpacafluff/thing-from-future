@@ -143,8 +143,8 @@ footer {
 }
 
 /* Content */
-.content {
-  display: block;
+#content {
+  display: sticky;
   align-items: center;
   justify-content: center;
   width: 80%;
@@ -153,17 +153,18 @@ footer {
 
 /* Card */
 
-.cards-front {
+.card-container{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#cards-front {
+
   color: var(--darkest-gray);
 }
 
-.cards-back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#cards-back {
   color: var(--white);
 }
 
@@ -174,15 +175,7 @@ footer {
   width: 30vw;
   height: 50vh;
 }
-/*  FIX THIS MEDIA QUERY IS BROKEN
-    @media screen and (max-width:500px) {
-        .content {
-            display: block;
-            width: 100%;
-            justify-content: center;
-        }
-    }
-    */
+
 
 #arc-card-front {
   background-color: var(--arc-light);
@@ -219,6 +212,27 @@ footer {
   margin: 1vh 0 0.5vh 0;
 }
 
+.questionmark {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15vh;
+  margin: 4vh;
+}
+
+#arcQ {
+  color: var(--arc-dark);
+}
+#terrainQ {
+  color: var(--terrain-dark);
+}
+#objectQ {
+  color: var(--object-dark);
+}
+#moodQ {
+  color: var(--mood-dark);
+}
+
 /* Result Textboxes */
 
 .result-textbox {
@@ -236,6 +250,10 @@ footer {
 #time-textbox {
   background: var(--arc-lightest);
   color: var(--arc-dark);
+}
+
+#timeH3 {
+  margin-top: 3vh;
 }
 
 #terrain-textbox {
@@ -261,7 +279,7 @@ h1 {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 10vh;
+  font-size: 8vh;
   margin: 0.5vh;
   color: var(--black);
 }
