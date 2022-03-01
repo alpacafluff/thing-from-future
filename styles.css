@@ -115,9 +115,9 @@ body {
 
     @media screen and (max-width:480px) {
         .card {
-            display: block;
-            width: 10vw;
-            height: 05h;
+            display: flex;
+            width: 5vw;
+            height: 3vh;
         }
 
       /*Still broken!*/
