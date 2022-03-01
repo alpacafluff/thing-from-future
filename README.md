@@ -7,5 +7,6 @@ This little project I made to dust off my basic web development skills. I used t
 
 
 
-Copyright (c) 2022 Pilar Gomez Ruiz, under MIT License
+Copyright (c) 2022 Pilar Gomez Ruiz
+Licensed under the [MIT License](LICENSE.TXT)
 
