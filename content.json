@@ -20,18 +20,18 @@
             },
             {
               "name": "Transformation",
-              "description": "A future in which profound historical evolution has ocurred"
+              "description": "a future in which profound historical evolution has ocurred"
             }
           ]
         },
         {
           "time": [
-            "A few years",
-            "A decade",
-            "A generation",
-            "Two generations",
-            "A century",
-            "A millenium"
+            "A few years from now",
+            "A decade from now",
+            "A generation from now",
+            "Two generations from now",
+            "A century from now",
+            "A millenium from now"
           ]
         }
       ]
