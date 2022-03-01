@@ -1,4 +1,4 @@
-name: Publish Website to CPanel (credit: https://ridbay.medium.com/how-to-deploy-private-github-repositories-to-cpanel-ef5493df8d9f=
+name: Publish Website to CPanel
 on:
   push:
     branches:
