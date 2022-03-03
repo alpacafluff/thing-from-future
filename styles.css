@@ -159,6 +159,12 @@ footer {
   justify-content: center;
 }
 
+@media (max-width: 800px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+
 #cards-front {
 
   color: var(--darkest-gray);
@@ -174,6 +180,9 @@ footer {
   padding: 4vh;
   width: 30vw;
   height: 50vh;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
 }
 
 
